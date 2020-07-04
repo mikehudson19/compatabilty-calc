@@ -14,3 +14,43 @@ body {
   flex-direction: column;
   /* align-content: space-around; */
 }
+
+.modalo {
+  position: fixed;
+  top: 5rem;
+  background: white;
+  margin: 0 1.5rem;
+}
+
+.modalo-container {
+  display: none;
+  background: rgba(48, 48, 48, 0.76);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top:0;
+  z-index: 2;
+}
+
+.modalo-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50vh;
+  justify-content: space-evenly;
+}
+
+.modalo-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 10rem;
+  justify-content: space-evenly;
+}
+
+.close {
+  position: fixed;
+  right: 2.8rem;
+  top: 8.8rem;
+}
