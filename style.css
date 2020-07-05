@@ -30,6 +30,7 @@ body {
   position: fixed;
   top:0;
   z-index: 2;
+  justify-content: center;
 }
 
 .modalo-content {
@@ -38,6 +39,9 @@ body {
   align-items: center;
   height: 50vh;
   justify-content: space-evenly;
+  margin: 0 auto;
+
+
 }
 
 .modalo-body {
@@ -49,8 +53,33 @@ body {
   justify-content: space-evenly;
 }
 
+.modalo-body .comp-score {
+  font-size: 2.2rem;
+}
+
+.modalo-body .comp-message {
+  font-size: 1.2rem;
+}
+
 .close {
   position: fixed;
   right: 2.8rem;
   top: 8.8rem;
+}
+
+.loader {
+  display: none;
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  background: rgba(235, 235, 235, 0.829);
+  height: 100vh;
+  width: 100vw;
+}
+
+.loader img {
+  width: 45%;
+  position: absolute;
+  top: 15rem;
+  left: 6.3rem;
 }

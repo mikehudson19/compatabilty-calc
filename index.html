@@ -18,28 +18,30 @@
       <input type="text" class="text w-50 mx-auto my-3" id="name2">
    
     <button type="button" class="w-75 mx-auto my-3 btn btn-light" id="calculate">Calculate</button>
+    
+  </div>    
   </div>
+  <div class="loader">
+    <img src="/images/35771931234507.564a1d2403b3a.gif" alt="">
   </div>
 
 <!-- Modal -->
 <div class="modalo-container">
   <div class="modalo my-5 h-50">
     <div class="modalo-dialog">
-      <button type="button" class="close">
-        <span>&times;</span>
-      </button>
+     
       <div class="modalo-content">
         <div class="modalo-header">
           <h5 class="modalo-title">Your Compatability Results</h5>
           
         </div>
         <div class="modalo-body">
-          <span class="comp-score">79%</span>
-          <p class="comp-message">"You two go together like a fine wine and a stinky cheese"</p>
+          <span class="comp-score font-weight-bolder"></span>
+          <p class="comp-message"></p>
         </div>
         <div class="modalo-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="calcAgain">Calculate Again</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="calcNew">Calculate New Couple</button>
+          <button type="button" class="btn btn-secondary ml-2" data-dismiss="modal" id="calcAgain">Calculate Again</button>
+          <button type="button" class="btn btn-secondary mr-2 ml-1" data-dismiss="modal" id="calcNew">Calculate New Couple</button>
         </div>
       </div>
     </div>
