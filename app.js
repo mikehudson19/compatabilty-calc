@@ -18,7 +18,7 @@ function triggerModalo() {
   setTimeout(() => {
     loader.style.display = 'none';
     modalo.style.display = 'flex';
-  }, 3500)
+  }, 2800)
 }
 
 function closeModalo() {
@@ -37,28 +37,28 @@ function calculateMatch() {
   const name2 = document.querySelector('#name2');
   const scoreInput = document.querySelector('.comp-score');
   const messageInput = document.querySelector('.comp-message');
-  const array1 = ['You two go together like rice cakes and peanut butter (plus syrup, banana and cinnamon).', 'The universe brought you two together for a reason.', 'She is the strawberry to his chocolate.', 'Soulmates don\'t exist, but if they did, you two can stop looking.']
-  const array2 = ['This is an okay match', 'Not the best, go for Michael instead', 'Bad Match']
+  const array1 = ['You two go together like rice cakes and peanut butter (plus syrup, banana and cinnamon).', 'The universe (and Bumble) brought you two together for a reason.', 'She is the strawberry to his chocolate.', 'Soulmates don\'t exist, but if they did, you two can stop looking.', 'He\'s the Harry to her Ginny, the Ron to her Hermione.', 'They\'re both Virgo Hufflepuffs? Enough said.']
+  const array2 = ['This is an okay match. He\'s probably not a Hufflepuff though.', 'Not the best match, maybe she should give that Michael guy a shot instead?.', 'They go together like Dumbledore and Neville Longbottom. Keep looking.', 'He would be lucky to have her. She can do better though.']
 
-  const score = Math.floor((Math.random() * 15) + 85);
+  const score = Math.floor((Math.random() * 10) + 90);
   const score2 = Math.floor((Math.random() * 10) + 35);
   const score3 = Math.floor((Math.random() * 100));
 
   const title = document.querySelector('.modalo-title');
-  title.innerText = `The compatability score for ${name1.value} and ${name2.value} is:`
   
-  if ((name1.value === 'Rivon Pretorius' || name1.value === 'Michael Hudson') && (name2.value === 'Rivon Pretorius' || name2.value === 'Michael Hudson')) {
+  if ((name1.value.toLowerCase() === 'rivon pretorius' || name1.value.toLowerCase() === 'michael hudson') && (name2.value.toLowerCase() === 'rivon pretorius' || name2.value.toLowerCase() === 'michael hudson')) {
     scoreInput.innerText = `${score}%`;
-    messageInput.innerText = array1[Math.floor(Math.random() * 3)];
+    messageInput.innerText = array1[Math.floor(Math.random() * 6)];
+    console.log(Math.floor(Math.random() * 6))
 
-  } else if (name1.value == 'Rivon Pretorius' || name2.value == 'Rivon Pretorius') {
+  } else if (name1.value.toLowerCase() == 'rivon pretorius' || name2.value.toLowerCase() == 'rivon pretorius') {
     scoreInput.innerText = `${score2}%`;
-    messageInput.innerText = array2[Math.floor(Math.random() * 3)];
+    messageInput.innerText = array2[Math.floor(Math.random() * 4)];
   } else {
     scoreInput.innerText = `${score3}%`
     if (score3 > 80) {
       
-      messageInput.innerText = 'Great match'
+      messageInput.innerText = 'Great match.'
     } else if (score3 < 80 && score3 > 50) {
       messageInput.innerText = 'Average match.'
 
