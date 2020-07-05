@@ -5,7 +5,7 @@ body {
 
 .container-fluid {
   background: linear-gradient(rgba(53, 53, 53, 0.73), rgba(238, 238, 238, 0.521)), 
-              url('/images/dyu-ha-ltfeKRmI-8k-unsplash.jpg') center no-repeat;
+              url('dyu-ha-ltfeKRmI-8k-unsplash.jpg') center no-repeat;
   background-size: cover;
 }
 
