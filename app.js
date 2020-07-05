@@ -6,19 +6,24 @@ const modaloNewBtn = document.getElementById('calcNew');
 calculateBtn.addEventListener('click', triggerModalo);
 
 function triggerModalo() {
-  // ADD A SPINNER TO INDICATE THAT IT IS LOADING 
+  const loader = document.querySelector('.loader');
+  loader.style.display = 'block';
   calculateMatch();
-  const modalo = document.querySelector('.modalo-container');
-  modalo.style.display = 'block';
+  setTimeout(() => {
+    const modalo = document.querySelector('.modalo-container');
+    modalo.style.display = 'block';
+  }, 500)
 }
 
 modaloAgainBtn.addEventListener('click', triggerModalo);
-
 modaloNewBtn.addEventListener('click', closeModalo);
 
 function closeModalo() {
   const modalo = document.querySelector('.modalo-container');
   modalo.style.display = 'none';
+  const loader = document.querySelector('.loader');
+  loader.style.display = 'none';
+
 }
 
 
